@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/home.css'
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router'
-import Productcard from './productcard'
+import Productcard from './Productcard'
 const Home = () => {
   let navigate=useNavigate()
   let [cartcounter,setcounter]=useState(0)
