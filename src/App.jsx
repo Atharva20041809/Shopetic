@@ -1,7 +1,7 @@
 import './App.css'
 import {createBrowserRouter,RouterProvider} from "react-router";
 import Home from './components/Home';
-import Product from './components/product';
+import Product from './components/Product';
 import Cart from './components/Cart.jsx'
 import Buy from './components/Buy.jsx'
 import Signup from './components/Signup.jsx';
