@@ -158,3 +158,83 @@
     text-align: center;
   }
   
+  @media (max-width: 768px) {
+    .empty {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  
+    .empty .shopingcart-other {
+      font-size: 1.5rem;
+    }
+  
+    .empty p {
+      font-size: 1rem;
+    }
+  
+    .shopingcart {
+      padding: 1rem;
+      width: 95%;
+    }
+  
+    .shopingcart h1 {
+      font-size: 2rem;
+    }
+  
+    .shopingcart button {
+      width: 100%;
+      font-size: 0.95rem;
+    }
+  
+    .cartitems {
+      gap: 15px;
+    }
+  
+    .card {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  
+    .card .photo {
+      width: 100%;
+    }
+  
+    .card .photo img {
+      border-radius: 10px;
+    }
+  
+    .card .content {
+      width: 100%;
+    }
+  
+    .card .content h3 {
+      font-size: 1.5rem;
+    }
+  
+    .card .content p {
+      font-size: 1rem;
+    }
+  
+    .card .content button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .count {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .count button img {
+      width: 12px;
+      height: 16px;
+    }
+  
+    .count span {
+      font-size: 20px;
+      width: 25px;
+    }
+  }
+  
