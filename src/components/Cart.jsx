@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 import { useEffect,useState } from 'react'
 import '../styles/cart.css'
-import Cartcard from './cartCard'
+import Cartcard from './Cartcard'
 const Cart = () => {
     let navigate=useNavigate();
     let [cartitems,setcartitems]=useState([])
