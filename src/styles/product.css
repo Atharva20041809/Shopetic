@@ -163,3 +163,8 @@
     color: white;
   }
   
+  @media (max-width: 768px){
+    .singleproduct{
+      flex-direction: column;
+    }
+  }
