@@ -16,7 +16,7 @@ const Signup = () => {
   }
   function handelpassword(event){
     let newobj={...userdata}
-    newobj.password=event.target.value 
+    newobj.password=event.target.value
     setuserdata(newobj)
   }
   function handelclick(event){
