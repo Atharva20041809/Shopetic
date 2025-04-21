@@ -40,7 +40,8 @@ const Cart = () => {
   </button>
       </div>
     }else{
-      return <div className='shopingcart'>
+      return <div className='main'>
+        <div className='shopingcart'>
           <h1>Shopping Cart</h1>
           <button onClick={handeldeselect}>Deselect all items</button>
           <div className="cartitems">
@@ -48,8 +49,8 @@ const Cart = () => {
           return <Cartcard arr={arr} update={update}/>
         })}
       </div>
-        </div>
-        
+      </div>
+      </div>
     }
 }
 

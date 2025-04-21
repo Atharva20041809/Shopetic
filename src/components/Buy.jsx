@@ -17,9 +17,7 @@ const Buy = (props) => {
     Go to home
   </button>
 </div>
-
-  )
-  
+)
 }
 
 export default Buy
