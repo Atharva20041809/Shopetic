@@ -18,7 +18,7 @@ const Productcard = (props) => {
             <button className='home-card-buy-btn' onClick={(e) => {e.stopPropagation(); navigate(`/product`, { state: ele })}}>Buy now</button>
           </div>
         </div>
-</>
+          </>
 
 }
 
