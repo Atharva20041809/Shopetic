@@ -15,7 +15,7 @@ const Productcard = (props) => {
               <span className="home-card-price">${ele.price.toFixed(2)}</span>
               <span className="home-card-discount">-{ele.discountPercentage}%</span>
             </div>
-            <button className='home-card-buy-btn' onClick={(e) => {e.stopPropagation(); navigate(`/buy`, { state: ele })}}>Buy now</button>
+            <button className='home-card-buy-btn' onClick={(e) => {e.stopPropagation(); navigate(`/product`, { state: ele })}}>Buy now</button>
           </div>
         </div>
 </>
