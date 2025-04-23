@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
+import { useNavigate } from 'react-router'
 const Cartcard = (props) => {
     let ele={...props.arr[0]}
     let [counter,setcounter]=useState(props.arr[1])
+    let navigate=useNavigate()
     useEffect(() => {
         setcounter(props.arr[1]);
       }, [props.arr]);
@@ -35,6 +37,7 @@ const Cartcard = (props) => {
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         updateUsersInLocalStorage(currentUser)
         props.update()
+        navigate('/cart')
     }
     function increase(){
         let currentUser=JSON.parse(localStorage.getItem('currentUser'))

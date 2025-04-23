@@ -3,8 +3,10 @@ import { useLocation, useNavigate } from 'react-router'
 import { useEffect,useState } from 'react'
 import '../styles/product.css'
 const Product = () => {
+    let navigate=useNavigate()
     const { state: ele } = useLocation();
     const [message, setMessage] = useState("");
+    let [cartcounter,setcounter]=useState(0)
     function updateUsersInLocalStorage(currentUser) {
       let users = JSON.parse(localStorage.getItem("users")) || [];
       const userIndex = users.findIndex(user => user.username === currentUser.username);
@@ -15,7 +17,10 @@ const Product = () => {
       }
       localStorage.setItem("users", JSON.stringify(users));
     }
-    let navigate=useNavigate()
+    useEffect(()=>{
+      let currentUser=JSON.parse(localStorage.getItem('currentUser'))
+      setcounter(currentUser.cart.length)
+    },[])
     useEffect(() => {
       const variable = document.getElementById("image_contain");
       const imageWidth = 500; // same as mine image width
@@ -44,12 +49,32 @@ const Product = () => {
         setMessage("Item added to cart!");
         setTimeout(() => setMessage(""), 2000);
       }
+      setcounter(currentUser.cart.length)
+    }
+    function handelcartsec(){
+      navigate('/cart')
     }
   return (
     <div>
-        <button className='back' onClick={()=>{navigate(-1)}}> 
+        {/* <button className='back' onClick={()=>{navigate(-1)}}> 
             <img src="https://static.vecteezy.com/system/resources/previews/000/589/654/non_2x/vector-back-icon.jpg" alt="" height="20px" width="20px"/>
-        </button>
+        </button> */}
+        {/* ****************************** */}
+        <div className="header">
+      <div className='navbar'>
+        <div className='home' onClick={()=>{navigate('/home')}}>
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="" height="40px" width="40px"/>
+        </div>
+        <div className='shopetic'>Shopetic</div>
+        <div className='cart' onClick={handelcartsec}>
+          <div className="cartcount">
+          {cartcounter}
+          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" height="40px" width="40px"/>
+        </div> 
+      </div>
+      </div>
+        {/* ****************************** */}
         {message && <div className='cartmessage'>{message}</div>}
         <div className='singleproduct'>
           <div className='image_contain' id='image_contain'>

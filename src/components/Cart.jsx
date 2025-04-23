@@ -6,10 +6,19 @@ import Cartcard from './Cartcard'
 const Cart = () => {
     let navigate=useNavigate();
     let [cartitems,setcartitems]=useState([])
+    let [cartcounter,setcounter]=useState(0)
     useEffect(()=>{update()},[])
     function update(){
       let currentUser=JSON.parse(localStorage.getItem('currentUser'))
       setcartitems(currentUser.cart)
+      setcounter(currentUser.cart.length)
+    }
+    useEffect(()=>{
+      let currentUser=JSON.parse(localStorage.getItem('currentUser'))
+      setcounter(currentUser.cart.length)
+    },[])
+    function handelcartsec(){
+      navigate('/cart')
     }
     function updateUsersInLocalStorage(currentUser) {
       let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -27,6 +36,7 @@ const Cart = () => {
       currentUser.cart=[]
       localStorage.setItem('currentUser',JSON.stringify(currentUser))
       updateUsersInLocalStorage(currentUser)
+      setcounter(currentUser.cart.length)
     }
     
     if(cartitems.length==0){
@@ -41,6 +51,22 @@ const Cart = () => {
       </div>
     }else{
       return <div className='main'>
+         {/* ****************************** */}
+         <div className="header">
+      <div className='navbar'>
+        <div className='home' onClick={()=>{navigate('/home')}}>
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="" height="40px" width="40px"/>
+        </div>
+        <div className='shopetic'>Shopetic</div>
+        <div className='cart' onClick={handelcartsec}>
+          <div className="cartcount">
+          {cartcounter}
+          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" height="40px" width="40px"/>
+        </div> 
+      </div>
+      </div>
+        {/* ****************************** */}
         <div className='shopingcart'>
           <h1>Shopping Cart</h1>
           <button onClick={handeldeselect}>Deselect all items</button>
