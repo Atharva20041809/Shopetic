@@ -38,21 +38,7 @@
   color: #000000;
 }
 
-.shopingcart button {
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 30px;
-  transition: background-color 0.3s ease;
-}
 
-.shopingcart button:hover {
-  background-color: #333333;
-}
 
 .cartitems {
   display: flex;
@@ -110,36 +96,42 @@
   margin-bottom: 15px;
 }
 
-.card .content button {
-  background-color: #000000;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card .content button:hover {
-  background-color: #333333;
-}
-
 .count {
   display: flex;
   align-items: center;
   gap: 10px;
-}
 
-.count button {
-  margin-top: 10px;
-  background-color: transparent;
+}
+button{
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-size: large;
   border: none;
-  padding: 6px;
+  padding: 10px;
+}
+button:hover{
+  transform: scale(1.034);
+  transition: transform 0.3s ease;
+  background-color: #333333;
+}
+.increase, .decrease {
+  color: black;
+  margin-top: 10px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 4px;
+  font-size: large;
+  padding:6px 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.increase:hover, .decrease:hover{
+  transform: scale(1.034);
+  transition: transform 0.3s ease;
+  background-color: whitesmoke;
 }
 
 .count button img {

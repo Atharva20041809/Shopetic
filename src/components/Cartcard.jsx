@@ -60,13 +60,13 @@ const Cartcard = (props) => {
       <h3>{ele.title}</h3>
       <p>{ele.description}</p>
       <div className='count'>
-        <button onClick={decrease}>
+        <button onClick={decrease} className='decrease'>
             <img src="https://cdn-icons-png.freepik.com/512/1345/1345874.png" alt=""/>
         </button>
         <span>
         {counter}
         </span>
-        <button onClick={increase}>+</button>
+        <button onClick={increase} className='increase'>+</button>
       </div>
     </div>
 </div>
